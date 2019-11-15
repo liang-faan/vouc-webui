@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  form(action="." method="POST")
+    div
+        label(for="client") Username:
+        input(
+        type="text"
+        id="client"
+        name="client"
+        )
+    div
+        label(for="clientSecret") Password:
+        input(
+        type="text"
+        id="clientSecret"
+        name="clientSecret"
+        )
+    div
+        label(for="partner") Partner:
+        select(name='partner', id='partner')
+            each val in ['SINGTEL']
+                option=val
+    div
+        label(for="channel") Channel:
+        select(name='channel', id='channel')
+            each val in ['MSTA']
+                option=val
+    div
+        input(type="submit" value="Submit")
